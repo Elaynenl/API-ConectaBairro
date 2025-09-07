@@ -22,6 +22,34 @@ afterAll(async () => {
 });
 
 describe("Fluxo completo de Usuário e Empreendimentos", () => {
+  it("Deve cadastrar usuário", async () => {
+    const res = await request(app).post("/usuarios/cadastroUsuario").send({
+      nome: "Usuário Teste",
+      email: "testando@teste.com",
+      senha: "123456"
+    });
+
+    expect(res.statusCode).toBe(201);
+    expect(res.body).toHaveProperty("_id");
+    expect(res.body).toHaveProperty("token");
+  }, 15000);
+
+  it("Deve autenticar usuário e obter token", async () => {
+    await request(app).post("/usuarios/cadastroUsuario").send({
+      nome: "Usuário Teste",
+      email: "testando@teste.com",
+      senha: "123456"
+    });
+
+    const res = await request(app).post("/usuarios/login").send({
+      email: "testando@teste.com",
+      senha: "123456"
+    });
+
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toHaveProperty("token");
+    token = res.body.token;
+  }, 15000);
 
   it("Deve cadastrar empreendimento com token", async () => {
     await request(app).post("/usuarios/cadastroUsuario").send({
@@ -174,3 +202,4 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
     expect(res.body.mensagem).toBe("Empreendimento deletado com sucesso");
   }, 15000);
 });
+
