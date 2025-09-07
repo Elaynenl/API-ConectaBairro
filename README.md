@@ -796,7 +796,7 @@ O desenvolvimento da API ConectaBairro foi realizado por uma equipe composta por
 - Elaboração do arquivo `.env.example` com as variáveis de ambiente necessárias
 - Criação da coleção de testes no Postman
 - Redação do README principal e organização da documentação geral do projeto
-- 
+
 
 **Arquivos sob responsabilidade:**  
 - `src/controllers/empreendimentosController.js`  
@@ -805,7 +805,7 @@ O desenvolvimento da API ConectaBairro foi realizado por uma equipe composta por
 - `src/services/viaCepService.js`  
 - `src/middleware/authMiddleware.js`   
 - `.env.example`
-- - `postman/collection.json`   
+-  `postman/collection.json`   
 - `README.md`
 
 ---
