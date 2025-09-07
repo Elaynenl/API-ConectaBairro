@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "ac7f53e0-b385-42c9-93e3-6ade6058b0ff",
+		"name": "Técnicas de Integração de Sistemas - N703",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36428360"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/usuarios/cadastroUsuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Teste\",\r\n  \"email\": \"teste@email.com\",\r\n  \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/cadastroUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"cadastroUsuario"
+					]
+				},
+				"description": "Endpoint para Cadastrar Usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/usuarios/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"teste@email.com\",\r\n  \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"login"
+					]
+				},
+				"description": "Endpoint para realizar Login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/empreendimentos",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Pizzaria da Carmem Miranda\",\r\n  \"descricao\": \"Fabricamos pizzas doces e salgadas\",\r\n  \"endereco\": {\r\n    \"cep\": \"60180415\",\r\n    \"rua\": \"Rua Benedito Macêdo\",\r\n    \"bairro\": \"Cais do Porto\",\r\n    \"numero\": \"100\",\r\n    \"complemento\": \"\",\r\n    \"cidade\": \"Fortaleza\",\r\n    \"estado\": \"CE\"\r\n  },\r\n  \"telefone\": \"85998989999\",\r\n  \"email\": \"carmem_pizzaria@teste.com\",\r\n  \"palavrasChave\": [\r\n    \"pizza doce\",\r\n    \"pizza salgada\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/empreendimentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"empreendimentos"
+					]
+				},
+				"description": "Endpoint para Cadastrar Empreendimento"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/empreendimentos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/empreendimentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"empreendimentos"
+					]
+				},
+				"description": "Endpoint para listar Empreendimentos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/empreendimentos/:id",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"descricao\": \"Comércio pizzas e pastéis\",\r\n  \"telefone\": \"85999999999\",\r\n  \"endereco\": {\r\n    \"rua\": \"Rua Lindoya\",\r\n    \"numero\": \"300\"\r\n  },\r\n  \"palavrasChave\": [\"pizzaria\", \"pastéis\", \"Fortaleza\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/empreendimentos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"empreendimentos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "Endpoint para Editar Empreendimento"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/empreendimentos/:id",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/empreendimentos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"empreendimentos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "Endpoint para Deletar Empreendimento"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/clima?cidade=Fortaleza\n",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/clima?cidade=Fortaleza",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"clima"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Fortaleza"
+						}
+					]
+				},
+				"description": "Endpoint para Consulta de clima por cidade"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/empreendimentos?cidade=fortaleza&bairro=cais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/empreendimentos?cidade=fortaleza&bairro=cais",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"empreendimentos"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "fortaleza"
+						},
+						{
+							"key": "bairro",
+							"value": "cais"
+						}
+					]
+				},
+				"description": "Busca por Empreendimentos usando query params."
+			},
+			"response": []
+		}
+	]
+}
