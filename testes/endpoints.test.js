@@ -22,6 +22,9 @@ afterAll(async () => {
 });
 
 describe("Fluxo completo de Usuário e Empreendimentos", () => {
+
+  // para o aluísio adicionar
+
   it("Deve cadastrar usuário", async () => {
     const res = await request(app).post("/usuarios/cadastroUsuario").send({
       nome: "Usuário Teste",
@@ -81,8 +84,8 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
       });
 
     expect(res.statusCode).toBe(201);
-    expect(res.body).toHaveProperty("_id");
-    empreendimentoId = res.body._id;
+    expect(res.body.empreendimento).toHaveProperty("_id");
+    empreendimentoId = res.body.empreendimento._id;
   }, 15000);
 
   it("Deve listar empreendimentos", async () => {
@@ -114,7 +117,7 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
         palavrasChave: ["fortaleza", "praia"]
       });
 
-    empreendimentoId = cadastro.body._id;
+    empreendimentoId = cadastro.body.empreendimento._id;
 
     const res = await request(app).get("/empreendimentos");
     expect([200, 404]).toContain(res.statusCode);
@@ -150,13 +153,22 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
         palavrasChave: ["fortaleza", "praia"]
       });
 
-    empreendimentoId = cadastro.body._id;
+    empreendimentoId = cadastro.body.empreendimento._id;
 
     const res = await request(app)
       .put(`/empreendimentos/${empreendimentoId}`)
       .set("Authorization", `Bearer ${token}`)
       .send({
-        descricao: "Descrição atualizada"
+        nome: "Residencial Fortaleza",
+        descricao: "Descrição atualizada",
+        endereco: {
+          rua: "Av. Beira Mar",
+          bairro: "Meireles",
+          cidade: "Fortaleza",
+          estado: "CE",
+          cep: "60110-000"
+        },
+        palavrasChave: ["fortaleza", "praia"]
       });
 
     expect(res.statusCode).toBe(200);
@@ -183,16 +195,16 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
         nome: "Residencial Fortaleza",
         descricao: "Empreendimento de teste",
         endereco: {
-          cep: "60110-000",
           rua: "Av. Beira Mar",
           bairro: "Meireles",
           cidade: "Fortaleza",
-          estado: "CE"
+          estado: "CE",
+          cep: "60110-000"
         },
         palavrasChave: ["fortaleza", "praia"]
       });
 
-    empreendimentoId = cadastro.body._id;
+    empreendimentoId = cadastro.body.empreendimento._id;
 
     const res = await request(app)
       .delete(`/empreendimentos/${empreendimentoId}`)
@@ -202,4 +214,3 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
     expect(res.body.mensagem).toBe("Empreendimento deletado com sucesso");
   }, 15000);
 });
-
