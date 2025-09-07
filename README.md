@@ -793,18 +793,19 @@ O desenvolvimento da API ConectaBairro foi realizado por uma equipe composta por
 - Implementação completa das rotas de empreendimentos, incluindo controller, model e validações  
 - Criação do middleware de autenticação com JWT  
 - Desenvolvimento do serviço de integração com a API ViaCEP  
-- Estruturação dos testes automatizados para empreendimentos  
-- Elaboração do arquivo `.env.example` com as variáveis de ambiente necessárias  
-- Redação do README principal e organização da documentação geral do projeto  
+- Elaboração do arquivo `.env.example` com as variáveis de ambiente necessárias
+- Criação da coleção de testes no Postman
+- Redação do README principal e organização da documentação geral do projeto
+- 
 
 **Arquivos sob responsabilidade:**  
 - `src/controllers/empreendimentosController.js`  
 - `src/models/Empreendimento.js`  
 - `src/routes/empreendimentosRoutes.js`  
 - `src/services/viaCepService.js`  
-- `src/middleware/authMiddleware.js`  
-- `test/empreendimentos.test.js`  
-- `.env.example`  
+- `src/middleware/authMiddleware.js`   
+- `.env.example`
+- - `postman/collection.json`   
 - `README.md`
 
 ---
@@ -867,14 +868,15 @@ O desenvolvimento da API ConectaBairro foi realizado por uma equipe composta por
 ### Aluísio Rodrigues Júnior  
 **Função:** Validação técnica e testes manuais  
 **Responsabilidades:**  
-- Criação da coleção de testes no Postman  
 - Testes manuais das rotas públicas e protegidas  
 - Validação de respostas da API e sugestões de melhoria na experiência de uso  
-- Desenvolvimento dos testes automatizados para autenticação de usuários  
+- Estruturação e desenvolvimento dos testes automatizados
+
 
 **Arquivos sob responsabilidade:**  
-- `postman/collection.json`  
-- `test/usuarios.test.js`
+- `test/endpoints.test.js`
+- `setupTestDB.js`
+- `jest.config.js`
 
 ---
 
