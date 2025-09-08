@@ -5,7 +5,7 @@ const API_KEY = process.env.OPENWEATHER_API_KEY;
 
 export const buscarClima = async (cidade) => {
   try {
-    const urlClima = https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&lang=pt_br&units=metric;
+    const urlClima = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&lang=pt_br&units=metric`;
     const resposta = await fetch(urlClima);
 
     if (!resposta.ok) {
