@@ -8,7 +8,7 @@ export const buscarClima = async (req, res) => {
       return res.status(400).json({ erro: "Informe o nome da cidade" });
     }
 
-    const url = https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&lang=pt_br&units=metric;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API_KEY}&lang=pt_br&units=metric`;
 
     const resposta = await fetch(url);
 
