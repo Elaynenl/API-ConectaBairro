@@ -378,7 +378,6 @@ Para realizar o login, siga os passos abaixo:
 
 ```json
 {
-  "nome": "Teste",
   "email": "teste@email.com",
   "senha": "123456"
 }
