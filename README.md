@@ -37,7 +37,7 @@ Muitas vezes nos deslocamos por grandes distâncias em busca de um serviço ou p
 Pensando nisso, idealizamos o ConectaBairro, que tem como objetivo simplificar a forma como os moradores encontram serviços e empreendimentos locais. A proposta promove a economia colaborativa e ajuda pequenos empreendedores — e até mesmo pequenas empresas — a conquistarem maior visibilidade junto aos moradores da região onde estão localizados.
 <br>
 
-A ideia resgata a função que, antigamente, era desempenhada pelos "jornalzinhos de bairro", agora em formato digital e com acesso via web. Empresas e empreendedores podem cadastrar seus empreendimentos para divulgar seus serviços e produtos, enquanto usuários comuns podem consultar opções próximas de forma fácil e eficiente — evitando deslocamentos desnecessários e fortalecendo a economia local.
+A ideia resgata a função que, antigamente, era desempenhada pelos "jornaizinhos de bairro", agora em formato digital e com acesso via web. Empresas e empreendedores podem cadastrar seus empreendimentos para divulgar seus serviços e produtos, enquanto usuários comuns podem consultar opções próximas de forma fácil e eficiente — evitando deslocamentos desnecessários e fortalecendo a economia local.
 
 ---
 
