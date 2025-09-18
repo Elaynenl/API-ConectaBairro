@@ -622,7 +622,7 @@ A API retorna mensagens claras para facilitar o consumo e o tratamento de erros.
 {
     "mensagem": "Usuário cadastrado com sucesso",
     "_id": "68b4d4cdb98dfb4abe6addff",
-    "nome": "Testando Usuário",
+    "nome": "Teste Usuário",
     "email": "teste@teste.com",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjRkNGNkYjk4ZGZiNGFiZTZhZGRmZiIsImlhdCI6MTc1NjY4MTQyMiwiZXhwIjoxNzU2NzY3ODIyfQ.SW-PKqXcy0_yxIxKblU_Qo2NEWXuVdfjMcH0TpNA0sU"
 }
