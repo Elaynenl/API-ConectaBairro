@@ -560,7 +560,7 @@ Exemplo:
 
 <br>
 
-[Veja aqui um exemplo de resposta usando o query params `GET /empreendimentos?cidade=Fortaleza`](#ao-buscar-empreendimento-usando-um-dos-query-params-disponiveis)
+[Veja aqui um exemplo de resposta usando o query params `GET /empreendimentos?cidade=Fortaleza`](#ao-buscar-empreendimento-usando-um-dos-query-params-disponíveis)
 
 ---
 ## 9. Integração com API de Clima
@@ -792,8 +792,9 @@ Ex:
 ]
 ```
 
-[Veja o exemplo de requisição em Listar e Buscar Empreendimentos (rota pública)](#listar-e-buscar-empreendimentos-rota-publica)
+[Veja o exemplo de requisição em Listar e Buscar Empreendimentos (rota pública)](#listar-e-buscar-empreendimentos-rota-pública)
 
+### Listar e Buscar Empreendimentos (rota pública)
 
 ### ⚠️ Em caso de erro, a API retorna mensagens padronizadas como:
 
@@ -949,7 +950,3 @@ Sinta-se à vontade para abrir issues com sugestões, dúvidas ou melhorias. Tod
 ## 14. Licença
 
 Este projeto está licenciado sob os termos da [MIT License](LICENSE).
-
-
-
-
