@@ -747,54 +747,55 @@ Ex:
 
 ```json
 [
-    {
-        "cidade": "fortaleza",
-        "clima": {
-            "cidade": "Fortaleza",
-            "temperatura": 27.07,
-            "descricao": "algumas nuvens",
-            "umidade": 74,
-            "vento": 4.63
+  {
+    "cidade": "fortaleza",
+    "clima": {
+      "cidade": "Fortaleza",
+      "temperatura": 27.07,
+      "descricao": "algumas nuvens",
+      "umidade": 74,
+      "vento": 4.63
+    },
+    "empreendimentos": [
+      {
+        "endereco": {
+          "cep": "60180-900",
+          "rua": "Rua Benedito Macêdo",
+          "bairro": "Cais do Porto",
+          "numero": "800",
+          "complemento": "",
+          "cidade": "Fortaleza",
+          "estado": "CE"
         },
-        "empreendimentos": [
-            {
-                "endereco": {
-                    "cep": "60180-900",
-                    "rua": "Rua Benedito Macêdo",
-                    "bairro": "Cais do Porto",
-                    "numero": "800",
-                    "complemento": "",
-                    "cidade": "Fortaleza",
-                    "estado": "CE"
-                },
-                "_id": "68af3e50f131eef692759a91",
-                "nome": "Peixaria do seu Zé",
-                "descricao": "Comércio de peixes, polvos e frutos do mar em geral",
-                "telefone": "85998989999",
-                "email": "peixe_do_Ze@teste.com",
-                "palavrasChave": [
-                    "peixe fresco",
-                    "ostra",
-                    "marisco"
-                ],
-                "cidadeNormalizada": "fortaleza",
-                "bairroNormalizado": "cais do porto",
-                "palavrasChaveNormalizadas": [
-                    "peixe fresco",
-                    "ostra",
-                    "marisco"
-                ],
-                "criadoPor": null,
-                "createdAt": "2025-08-27T17:20:17.011Z",
-                "updatedAt": "2025-08-27T19:06:23.354Z",
-                "__v": 0
-            }
+        "_id": "68af3e50f131eef692759a91",
+        "nome": "Peixaria do seu Zé",
+        "descricao": "Comércio de peixes, polvos e frutos do mar em geral",
+        "telefone": "85998989999",
+        "email": "peixe_do_Ze@teste.com",
+        "palavrasChave": [
+          "peixe fresco",
+          "ostra",
+          "marisco"
+        ],
+        "cidadeNormalizada": "fortaleza",
+        "bairroNormalizado": "cais do porto",
+        "palavrasChaveNormalizadas": [
+          "peixe fresco",
+          "ostra",
+          "marisco"
+        ],
+        "criadoPor": null,
+        "createdAt": "2025-08-27T17:20:17.011Z",
+        "updatedAt": "2025-08-27T19:06:23.354Z",
+        "__v": 0
+      }
+    ]
+  }
 ]
 ```
 
 [Veja o exemplo de requisição em Listar e Buscar Empreendimentos (rota pública)](#listar-e-buscar-empreendimentos-rota-pública)
 
-### Listar e Buscar Empreendimentos (rota pública)
 
 ### ⚠️ Em caso de erro, a API retorna mensagens padronizadas como:
 
