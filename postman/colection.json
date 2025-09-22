@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "ac7f53e0-b385-42c9-93e3-6ade6058b0ff",
+		"_postman_id": "39ab04fc-62c6-44bf-8a9a-99f9af2cdb47",
 		"name": "Técnicas de Integração de Sistemas - N703",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "36428360"
+		"_exporter_id": "48378692",
+		"_collection_link": "https://elaynenl-06643d62-6909477.postman.co/workspace/988cbfd6-7448-46d3-8517-5c8cc29cfd0d/collection/48378692-39ab04fc-62c6-44bf-8a9a-99f9af2cdb47?action=share&source=collection_link&creator=48378692"
 	},
 	"item": [
 		{
@@ -141,6 +142,36 @@
 			"response": []
 		},
 		{
+			"name": "http://localhost:3000/empreendimentos?cidade=fortaleza&bairro=cais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/empreendimentos?cidade=fortaleza&bairro=cais",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"empreendimentos"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "fortaleza"
+						},
+						{
+							"key": "bairro",
+							"value": "cais"
+						}
+					]
+				},
+				"description": "Busca por Empreendimentos usando query params."
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:3000/empreendimentos/:id",
 			"request": {
 				"auth": {
@@ -195,7 +226,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer",
+						"value": "Bearer ",
 						"type": "text"
 					}
 				],
@@ -248,36 +279,6 @@
 					]
 				},
 				"description": "Endpoint para Consulta de clima por cidade"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/empreendimentos?cidade=fortaleza&bairro=cais",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/empreendimentos?cidade=fortaleza&bairro=cais",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"empreendimentos"
-					],
-					"query": [
-						{
-							"key": "cidade",
-							"value": "fortaleza"
-						},
-						{
-							"key": "bairro",
-							"value": "cais"
-						}
-					]
-				},
-				"description": "Busca por Empreendimentos usando query params."
 			},
 			"response": []
 		}
