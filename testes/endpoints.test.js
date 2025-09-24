@@ -23,8 +23,6 @@ afterAll(async () => {
 
 describe("Fluxo completo de Usuário e Empreendimentos", () => {
 
-  // para o aluísio adicionar
-
   it("Deve cadastrar usuário", async () => {
     const res = await request(app).post("/usuarios/cadastroUsuario").send({
       nome: "Usuário Teste",
@@ -214,3 +212,4 @@ describe("Fluxo completo de Usuário e Empreendimentos", () => {
     expect(res.body.mensagem).toBe("Empreendimento deletado com sucesso");
   }, 15000);
 });
+
